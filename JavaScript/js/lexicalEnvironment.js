@@ -176,68 +176,68 @@
  * source - https://javascript.ru/basic/closure
  */
 
-function addEvents(divs) {
+// function addEvents(divs) {
 
-    for(var i=0; i<divs.length; i++) {  
-        divs[i].innerHTML = i
-        divs[i].onclick = function() { alert(i) }
-    }
-}
+//     for(var i=0; i<divs.length; i++) {  
+//         divs[i].innerHTML = i
+//         divs[i].onclick = function() { alert(i) }
+//     }
+// }
 
 
  
- function makeDivs(parentId) {
-     for (var i=0;i<10;i++) {
-         var j = 9-i
-         var div = document.createElement('div')
-         div.style.backgroundColor = '#'+i+i+j+j+j+i
-         div.className="closure-div"
-         div.style.color = '#'+j+j+i+i+i+j
-         document.getElementById(parentId).appendChild(div-2)
-     }
- }
+//  function makeDivs(parentId) {
+//      for (var i=0;i<10;i++) {
+//          var j = 9-i
+//          var div = document.createElement('div')
+//          div.style.backgroundColor = '#'+i+i+j+j+j+i
+//          div.className="closure-div"
+//          div.style.color = '#'+j+j+i+i+i+j
+//          document.getElementById(parentId).appendChild(div-2)
+//      }
+//  }
 
- makeDivs+addEvents
-
-
+//  makeDivs+addEvents
 
 
 
 
 
 
-function addEvents2(divs) {
-    for(var i=0; i<divs.length; i++) {  
-        divs[i].innerHTML = i
-        divs[i].onclick = function(x) {
-            return function() { alert(x) }
-        }(i)
-    }
-}
 
 
-makeDivs+addEvents2
+// function addEvents2(divs) {
+//     for(var i=0; i<divs.length; i++) {  
+//         divs[i].innerHTML = i
+//         divs[i].onclick = function(x) {
+//             return function() { alert(x) }
+//         }(i)
+//     }
+// }
+
+
+// makeDivs+addEvents2
  
 
 
 
 
 
-var a = 123;
+// var a = 123;
 
-function func() {
-  var a = 22;
-  return function test(f) {
-    var a = 65;
-    f();
-  };
-}
+// function func() {
+//   var a = 22;
+//   return function test(f) {
+//     var a = 65;
+//     f();
+//   };
+// }
 
-var b = func();
+// var b = func();
 
-b(function() {
-  console.log(a);
-});
+// b(function() {
+//   console.log(a);
+// });
 
 
 
@@ -251,36 +251,36 @@ b(function() {
 
  * Следующий пример демонстрирует как функция, созданная new Function, игнорирует внешнюю переменную a и выводит глобальную вместо неё:
  */
-var a = 1;
+// var a = 1;
 
-function getFunc() {
-  var a = 2;
+// function getFunc() {
+//   var a = 2;
 
-  var func = new Function('', 'console.log(a)');
+//   var func = new Function('', 'console.log(a)');
 
-  return func;
-}
+//   return func;
+// }
 
-getFunc()(); // 1, из window
-
-
+// getFunc()(); // 1, из window
 
 
-/**
- * Сравним с обычным поведением:
- */
 
-var a = 1;
 
-function getFunc() {
-  var a = 2;
+// /**
+//  * Сравним с обычным поведением:
+//  */
 
-  var func = function() { console.log(a); };
+// var a = 1;
 
-  return func;
-}
+// function getFunc() {
+//   var a = 2;
 
-getFunc()(); // 2, из LexicalEnvironment функции getFunc
+//   var func = function() { console.log(a); };
+
+//   return func;
+// }
+
+// getFunc()(); // 2, из LexicalEnvironment функции getFunc
 
 /**
  * Функции, создаваемые через new Function, имеют значением [[Scope]] не внешний объект переменных, а window.
