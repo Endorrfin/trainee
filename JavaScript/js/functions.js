@@ -651,18 +651,57 @@ console.log(sum(1)(2)(3)());
 console.log(sum(1)(2)(3));
  */
 
-function sum(a) {
-  let result = a;
-  return function innerSum(a) {
-    if (a === toString(String)) {
-      result += a;
-    }
-    return innerSum;
-  }
-  return sum()
-}
+// function sum(a) {
+//   let result = a;
+//   return function innerSum(a) {
+//     if (a === toString()) {
+//       result += a;
+//     }
+//     return innerSum;
+//   }
+//   return sum()
+// }
 
-console.log(sum(1)(2)(3));
+// console.log(sum(1)(2)(3));
+
+
+// function sum(a) {
+//   let result = a;
+//   function innerSum (b) {
+//     result += b;
+//     return innerSum;
+//   }
+
+//   innerSum.toString = function() {
+//     return result
+//   }
+
+//   return innerSum;
+
+// }
+
+// console.log(sum(-15)(24));
+// console.log(sum(5)(-10)(15)(-20)('10'));
+
+
+
+
+// function AddValue (i) {
+//   let result = i;
+//   function insideResult (k) {
+//     result += k;
+//     return insideResult;
+//   }
+
+//   insideResult.toString = function() {
+//     return result;
+//   }
+//   return insideResult;
+// }
+
+// console.log(AddValue(4)(7));
+// console.log(AddValue(100)(-700));
+// console.log(AddValue(10)(-80)(80));
 
 
 
@@ -676,15 +715,58 @@ console.log(sum(1)(2)(3));
 // ===|=== TASK - CLOSURE
 /**
 Напишите функцию sum, которая бы работала следующим образом:
+sum(1)(2) == 3; // 1 + 2
+sum(1)(2)(3) == 6; // 1 + 2 + 3
+sum(5)(-1)(2) == 6
+sum(6)(-1)(-2)(-3) == 0
+sum(0)(1)(2)(3)(4)(5) == 15
+
+В общем, чтобы это хоть как-нибудь заработало, результат, возвращаемый sum, должен быть функцией.
+Между вызовами эта функция должна удерживать в памяти текущее значение счётчика.
+Согласно заданию, функция должна преобразовываться в число, когда она используется с оператором ==. Функции – объекты, так что преобразование происходит, как описано в главе Преобразование объектов в примитивы, поэтому можно создать наш собственный метод, возвращающий число.
  */
 
+// function sum(a) {
+
+//   let currentSum = a;
+
+//   function f(b) {
+//     currentSum += b;
+//     return f;
+//   }
+
+//   f.toString = function() {
+//     return currentSum;
+//   };
+
+//   return f;
+// }
+
+// console.log( sum(1)(2) ); // 3
+// console.log( sum(5)(-1)(2) ); // 6
+// console.log( sum(6)(-1)(-2)(-3) ); // 0
+// console.log( sum(0)(1)(2)(3)(4)(5) ); // 15
 
 
 
 
+// ===|=== TASK - CLOSURE
+// function totalNumber (x) {
+//   let curentValue = x;
+//   function innerResult (y) {
+//     curentValue +=y;
+//     return innerResult;
+//   }
 
+//   innerResult.toString = function() {
+//     return curentValue;
+//   };
 
+//   return innerResult;
+// }
 
+// console.log(totalNumber(1)(3));
+// console.log(totalNumber(1)(-3)(2));
 
 
 
