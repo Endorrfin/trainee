@@ -113,6 +113,227 @@
 
 
 // ===|=== EXAMPLE 
+// let user = { name: 'John' };
+
+// let admin = user;
+
+// admin.name = 'Peter'; // изменено по ссылке из переменной "admin"
+// console.log(user.name); // 'Peter', изменения видны по ссылке из переменной "user"
+
+// let security = user;
+
+// security.name = 'Rik';
+// console.log(user.name); // Rik , изменения видны по ссылке из переменной "user"
+
+
+
+
+
+// ===|=== EXAMPLE 
+// let user = {
+//   name: "John",
+//   age: 30
+// };
+
+// let clone = {}; // новый пустой объект
+
+// // скопируем все свойства user в него
+// for (let key in user) {
+//   clone[key] = user[key];
+// }
+
+// // теперь в переменной clone находится абсолютно независимый клон объекта.
+// clone.name = "Pete"; // изменим в нём данные
+
+// console.log( user.name ); // в оригинальном объекте значение свойства `name` осталось прежним – John.
+
+
+
+
+
+// ===|=== EXAMPLE 
+// let user = { name: "John" };
+
+// let permissions1 = { canView: true };
+// let permissions2 = { canEdit: true };
+
+// // копируем все свойства из permissions1 и permissions2 в user
+// Object.assign(user, permissions1, permissions2);
+
+// // now user = { name: "John", canView: true, canEdit: true }
+
+
+
+
+
+
+// ===|=== EXAMPLE 
+/**
+ * Мы также можем использовать Object.assign для простого клонирования:
+ */
+
+// let user = {
+//   name: "John",
+//   age: 30
+// };
+
+// let clone = Object.assign({}, user);
+
+
+
+
+
+// ===|=== EXAMPLE 
+// let user = {
+//   name: "John",
+//   sizes: {
+//     height: 182,
+//     width: 50
+//   }
+// };
+
+// console.log( user.sizes.height ); // 182
+
+
+// ===|=== EXAMPLE 
+
+/**
+ Существует стандартный алгоритм глубокого клонирования, Structured cloning algorithm. Он решает описанную выше задачу, а также более сложные задачи. Чтобы не изобретать велосипед, мы можем использовать реализацию этого алгоритма из JavaScript-библиотеки lodash, метод _.cloneDeep(obj).
+ */
+
+// let user = {
+//   name: "John",
+//   sizes: {
+//     height: 182,
+//     width: 50
+//   }
+// };
+
+// let clone = Object.assign({}, user);
+
+// console.log( user.sizes === clone.sizes ); // true, один и тот же объект
+
+// // user и clone обращаются к одному sizes
+// user.sizes.width++;       // меняем свойство в одном объекте
+// console.log(clone.sizes.width); // 51, видим результат в другом объекте
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
