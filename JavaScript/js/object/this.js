@@ -77,26 +77,36 @@
 Потеря в рекурсивных функциях, работающих через определенные интервалы времени.
  */
 
-var a = {
-	i: 0,
-	infinityIncrementation: function() {
-		console.log( this.i++ );
-		if (this.i < Infinity) setTimeout(this.infinityIncrementation,500);
-	}
-}
-a.infinityIncrementation(); // 0,undefined — не работает, потому что теряется контекст исполнения
-a.infinityIncrementation = a.infinityIncrementation.bind(a); //не правильный но работающий способ
-a.infinityIncrementation(); //0,1,2,3,4,5,6,7,8,9,10...Infinity-1
+// var a = {
+// 	i: 0,
+// 	infinityIncrementation: function() {
+// 		console.log( this.i++ );
+// 		if (this.i < Infinity) setTimeout(this.infinityIncrementation,500);
+// 	}
+// }
+// a.infinityIncrementation(); // 0,undefined — не работает, потому что теряется контекст исполнения
+// a.infinityIncrementation = a.infinityIncrementation.bind(a); //не правильный но работающий способ
+// a.infinityIncrementation(); //0,1,2,3,4,5,6,7,8,9,10...Infinity-1
 	
-//правильный способ
-var b = {
-	i: 0,
-	infinityIncrementation: function() {
-		console.log( this.i++ );
-		if (this.i < Infinity) setTimeout(function() {this.infinityIncrementation}.bind(this),500);
-	}
-}
-b.infinityIncrementation(); //0,1,2,3,4,5,6,7,8,9,10...Infinity-1
+// //правильный способ
+// var b = {
+// 	i: 0,
+// 	infinityIncrementation: function() {
+// 		console.log( this.i++ );
+// 		if (this.i < Infinity) setTimeout(function() {this.infinityIncrementation}.bind(this),500);
+// 	}
+// }
+// b.infinityIncrementation(); //0,1,2,3,4,5,6,7,8,9,10...Infinity-1
+
+
+
+/**
+Методы функций, позволяющие менять контекст исполнения — bind,call,apply
+
+Function.bind — метод, принимающий первый аргумент как контекст, в котором он будет исполняться (каким будет this), и остальные как неограниченное количество аргументов, с которыми будет вызываться возвращаемая функция.
+Function.apply — метод, вызывающий функцию, первый аргумент – аргумент, который будет являться this в функции, второй — массив аргументов, с которыми будет вызвана функция.
+Function.call — то же самое, что и apply, только вместо второго аргумента, неограниченное количество аргументов, которые будут переданы в функцию.
+ */
 
 
 

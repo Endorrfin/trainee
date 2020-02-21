@@ -200,48 +200,194 @@ alert( fridge.getFood() ); // внутри по-прежнему: котлета
 
 
 // ===|=== PROTOTYPE __proto__ INHERITANCE EXAMPLE
-/* # */ console.log(Function.__proto__ === Function.prototype);
-/* # */ console.log(Function.prototype.__proto__ === Object.prototype);
-/* # */ console.log(Object.__proto__ !== Object.prototype);
-/* # */ console.log(Object.__proto__ === Function.prototype);
+// /* # */ console.log(Function.__proto__ === Function.prototype);
+// /* # */ console.log(Function.prototype.__proto__ === Object.prototype);
+// /* # */ console.log(Object.__proto__ !== Object.prototype); // Whay *
+// /* # */ console.log(Object.__proto__ === Function.prototype);
  
-var A = function () {};
-/* # */ console.log(A.__proto__ === Function.prototype);
-A.prototype.b = 100;
+// var A = function () {};
+// /* # */ console.log(A.__proto__ === Function.prototype);
+// A.prototype.b = 100;
  
-var a = new A();
-/* # */ console.log(A.prototype.constructor === A);
-/* # */ console.log(A.prototype === a.__proto__);
-/* # */ console.log(a instanceof A);
+// var a = new A();
+// /* # */ console.log(A.prototype.constructor === A);
+// /* # */ console.log(A.prototype === a.__proto__);
+// /* # */ console.log(a instanceof A);
  
-A.prototype.c = 101;
-/* # */ console.log(a.c === 101);
+// A.prototype.c = 101;
+// /* # */ console.log(a.c === 101);
  
-a.c = -100;
-/* # */ console.log(a.c === -100);
+// a.c = -100;
+// /* # */ console.log(a.c === -100);
  
-A.prototype = {};
-/* # */ console.log(A.prototype.constructor !== A);
-/* # */ console.log(A.prototype.constructor === Object);
-/* # */ console.log(a.c === -100);
-/* # */ console.log(a.__proto__.b == 100);
-/* # */ console.log(a.__proto__.c == 101);
-/* # */ console.log(a.__proto__.constructor === A);
-/* # */ console.log(a.__proto__ !== A.prototype);
-/* # */ console.log(!(a instanceof A));
-/* # */ console.log(A.prototype.constructor === Object);
-/* # */ console.log(a.__proto__.constructor.prototype.constructor === Object);
+// A.prototype = {};
+// /* # */ console.log(A.prototype.constructor !== A);
+// /* # */ console.log(A.prototype.constructor === Object);
+// /* # */ console.log(a.c === -100);
+// /* # */ console.log(a.__proto__.b == 100);
+// /* # */ console.log(a.__proto__.c == 101);
+// /* # */ console.log(a.__proto__.constructor === A);
+// /* # */ console.log(a.__proto__ !== A.prototype); 
+// /* # */ console.log(!(a instanceof A));
+// /* # */ console.log(A.prototype.constructor === Object);
+// /* # */ console.log(a.__proto__.constructor.prototype.constructor === Object);
  
-A.prototype.b = 536;
-/* # */ console.log(a.b == 100);
-/* # */ console.log(a.__proto__.constructor.prototype.b === 536);
+// A.prototype.b = 536;
+// /* # */ console.log(a.b == 100);
+// /* # */ console.log(a.__proto__.constructor.prototype.b === 536);
  
-var b = new A();
-/* # */ console.log(a.__proto__.__proto__.constructor === a.__proto__.constructor.prototype.constructor);
+// var b = new A();
+// /* # */ console.log(a.__proto__.__proto__.constructor === a.__proto__.constructor.prototype.constructor);
  
-/* # */ console.log(b instanceof A);
-/* # */ console.log(b instanceof Object);
-/* # */ console.log(a instanceof Object);
+// /* # */ console.log(b instanceof A);
+// /* # */ console.log(b instanceof Object);
+// /* # */ console.log(a instanceof Object);
+
+
+
+
+
+
+
+
+
+// ===|=== constructor EXAMPLE
+// function Monster(name, hp, dmg) {
+// 	this.name = name || this.constructor.prototype.name();
+// 	this.hp = hp || this.constructor.prototype.hp;
+// 	this.dmg = dmg || this.constructor.prototype.dmg;
+// }
+// Monster.prototype = {
+// 	constructor: Monster,
+// 	hp: 10,
+// 	dmg: 3,
+// 	name: function() {
+// 		return 'RandomMonster'+(new Date).getTime();
+// 	},
+// 	offerFight: function(enemy) {
+// 		if (!enemy.acceptFight) {
+// 			console.log('this thing cant fight with me :(');
+// 			return;
+// 		}
+// 		enemy.acceptFight(this);
+// 		this.acceptFight(enemy);
+// 	},
+// 	acceptFight: function(enemy) {
+// 		var timeout = 50 + this.diceRollForRandom();
+// 		this.attack(enemy,timeout);
+// 	},
+// 	diceRollForRandom: function() {
+// 		return (Math.random() >= 0.5 ? 50 : 20);
+// 	},
+// 	takeDmg: function(dmg) {
+// 		console.log(this.name,' was damaged (',dmg,'),current HP is ',this.hp-dmg);
+// 		return this.hp -= dmg;
+// 	},
+// 	attack: function(enemy,timeout) {
+// 		if (enemy.takeDmg(this.dmg) <= 0) {
+// 			enemy.die();
+// 			this.win();
+// 			return;
+// 		}
+// 		this.to = setTimeout(function() {this.attack(enemy)}.bind(this),timeout);
+// 	},
+// 	win: function() {
+// 		console.log('My name is ' + this.name + ', and Im a winner');
+// 	},
+// 	die: function() {
+// 		console.log('I died, ' + this.name);
+// 		clearTimeout(this.to);
+// 	}
+// }
+// var ChuckNorris = new Monster('Chuck Norris', 100, 100);
+// var MikhailBoyarsky = new Monster('Misha Boyarsky', 200, 50);
+// MikhailBoyarsky.offerFight(ChuckNorris);
+
+
+
+
+
+
+
+
+// ===|=== FUNCTION __PROTO__ EXAMPLE
+/**
+в первом случае значение прототипа меняется каждый раз при создании объекта, во втором - устанавливается всего один раз.
+Отсюда можно сделать вывод, что если есть доступ к конструктору, прототип лучше менять непосредственное у него.
+ */
+
+// =====  EXAMPLE I
+// function Animal (type) {
+//   this.__proto__.type = type;
+// }
+
+// var cat = new Animal('cat');
+// console.log(cat.type); // cat
+
+// var dog = new Animal ('dog');
+// console.log(cat.type); // dog *
+// console.log(dog.type); // dog
+
+// // ===== EXAMPLE II
+// function CatTwo() {
+//   CatTwo.prototype.type = 'that cat';
+// }
+
+// var catTwo = new CatTwo();
+// console.log(catTwo.type); // that cat
+
+
+
+
+
+
+// =====  ПРИЯЗКА КОНТЕКСТА (FROM MENTOR)
+// function a () {}
+
+// const a = a.bind(null);
+
+// function b () {
+//   return a.apply(null)
+// }
+
+// const c = b.bind({});
+
+// function c () {
+//   return function b() {
+//     return a.apply(null)
+//   }.apply({});
+// }
+
+
+// const b = 1;
+
+
+
+// =====  ПОТЕРЯ КОНТЕКСТА (FROM MENTOR)
+// const a1 = {
+//   b: 2,
+//   getB: function() {
+ 
+//     return selt.b;
+//   }
+// };
+
+// console.log(a1.getB());
+
+// const getB = a1.getB.bind();
+
+// console.log(getB());
+
+// Function.prototype.newBind = function () {
+//   const self = this;
+//   return function () {}
+// }
+
+
+
+
+
+
 
 
 
