@@ -75,26 +75,26 @@
  Исправьте функцию, теряющую "this"
  */
 
-function askPassword(ok, fail) {
-  let password = prompt("Password?", '');
-  if (password == "rockstar") ok();
-  else fail();
-}
+// function askPassword(ok, fail) {
+//   let password = prompt("Password?", '');
+//   if (password == "rockstar") ok();
+//   else fail();
+// }
 
-let user = {
-  name: 'Вася',
+// let user = {
+//   name: 'Вася',
 
-  loginOk() {
-    console.log(`${this.name} logged in`);
-  },
+//   loginOk() {
+//     console.log(`${this.name} logged in`);
+//   },
 
-  loginFail() {
-    console.log(`${this.name} failed to log in`);
-  },
+//   loginFail() {
+//     console.log(`${this.name} failed to log in`);
+//   },
 
-};
+// };
 
-askPassword.call(this, user.loginOk, user.loginFail);
+// askPassword.call(this, user.loginOk, user.loginFail);
 
 
 
