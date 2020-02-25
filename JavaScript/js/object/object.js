@@ -222,8 +222,90 @@
 
 
 
+// === || ===  PROTOTYPE EXAMPLE I
+// var person = {
+//   name: 'John',
+//   age: 35,
+//   gender: 'male',
+//   greet: function() {
+//     console.log('Hi, my name is ' + this.name);
+//   }
+// }
 
 
+
+// var person = {
+//   name: 'Jessica',
+//   age: 23,
+//   gender: 'female',
+//   greet: function() {
+//     console.log('Hi, my name is ' + this.name);
+//   }
+// }
+
+
+// var person = {
+//   name: 'Bruce',
+//   age: 38,
+//   gender: 'male',
+//   greet: function() {
+//     console.log('Hi, my name is ' + this.name);
+//   }
+// }
+
+
+
+// === || ===  PROTOTYPE EXAMPLE II
+// var Person = {
+//   constructor: function(name, age, gender) {
+//     this.name = name;
+//     this.age = age;
+//     this.gender = gender;
+//     return this;
+//   },
+//   greet: function() {
+//     console.log("He, my name is " + this.name);
+//   }
+// };
+
+
+// var person, anotherPerson, thirdPerson;
+// person = Object.create(Person).constructor('John', 35, 'male');
+// anotherPerson = Object.create(Person).constructor('Jessica', 23, 'female');
+// thirdPerson = Object.create(Person).constructor('Bruce', 38, 'male');
+
+// console.log(person.name);
+// console.log(anotherPerson.age);
+// console.log(thirdPerson.name);
+
+// person.greet();
+// anotherPerson.greet();
+// thirdPerson.greet();
+
+// console.log(Person.isPrototypeOf(person)); // true;
+
+
+
+// Реализуем наследование
+// var WebDeveloper = Object.create(Person);
+// WebDeveloper.constructor = function(name, age, gender, skills) {
+//   // из конструктора класса WebDeveloper вызываем конструктор класса Person, делаем с помощью метода apply
+//   Person.constructor.apply(this, arguments);
+//   this.skills = skills || [];
+//   return this;
+// };
+
+// WebDeveloper.develop = function() {
+//   console.log('Working...');
+// };
+
+
+// var developer = Object.create(WebDeveloper).constructor('Jack', 21, 'male', ['html', 'css', 'js', 'php', 'mysql']);
+
+// console.log(developer.skills);
+// developer.develop();
+// console.log(developer.name);
+// developer.greet();
 
 
 

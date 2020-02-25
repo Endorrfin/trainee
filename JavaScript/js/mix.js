@@ -83,6 +83,28 @@
 
 
 
+// if (typeof Function.prototype.bind != 'function') {
+//   Function.prototype.bind = function (context) {
+//     var leftArgs = Array.prototype.slice.call(arguments, 1),
+//       fn = this;
+//     return function () {
+//       fn.apply(context, leftArgs.concat(arguments));
+//     };
+//   };
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -157,6 +179,177 @@
 //   F.prototype = obj;
 //   retun new F();
 // };
+
+
+
+// var Animal = function () {
+
+//   var helloCount = 0;
+//   var self = this;
+//   //priviledge methods
+//   this.AnimalHello = function() {
+//       helloCount++;
+//       console.log(self.Name + ' says hello (animalHello)');
+//   };
+
+//   this.GetHelloCount = function (callback) {
+//       callback.call(null, helloCount);
+//   }
+
+// };
+
+// Animal.prototype = {
+//   Name: 'Generic',
+//   IsAnimal: true
+// };
+
+// var Sheep = function (name) {
+
+//   var sheep = new Animal();
+//   //use parasitic inheritance to extend sheep
+//   //http://www.crockford.com/javascript/inheritance.html
+//   sheep.Name = name || 'Woolie'
+//   sheep.SheepHello = function() {
+//       this.AnimalHello();
+//       var self = this;
+//       this.GetHelloCount(function(count) {
+//           console.log('i (' + self.Name + ') have said hello ' + count + ' times (sheepHello anon callback)');
+//       });
+//   }
+
+//   return sheep;
+
+// };
+
+// Sheep.prototype = new Animal();
+// Sheep.prototype.isSheep = true;
+
+// var sheepie = new Sheep('Sheepie');
+// var lambie = new Sheep('Lambie');
+
+// sheepie.AnimalHello();
+// sheepie.SheepHello();
+// lambie.SheepHello();
+
+
+
+
+
+
+
+
+
+
+
+// Javascript Classical Inheritance - Prototypes
+
+// function Animal (name) {
+//   this.name = name;
+// }
+
+// Animal.prototype.breathe = function () {
+//   return "I'm breathing";
+// };
+
+// Animal.prototype.say_name = function () {
+//   return this.name;
+// };
+
+// function Dog (name) {
+//   Animal.call(this, name);
+// }
+
+// Dog.prototype = Object.create(Animal.prototype);
+
+// Dog.prototype.bark = function () {
+//   return 'ow ow';
+// };
+
+// // Main
+// var toto = new Dog('toto');
+// console.log(toto.say_name());
+// console.log(toto.bark());
+
+
+
+
+// Javascript Crockford's Functional Inheritance
+// spec receives instance properties
+function animal (spec) {
+  // interface object
+  var that = {};
+
+  // Private
+  function breathe () {
+    return "I'm breathing";
+  }
+
+  function say_name () {
+    return spec.name || '';
+  }
+
+  // Public - goes into that
+  that.breathe  = breathe;
+  that.say_name = say_name;
+
+  return that;
+}
+
+function dog (spec) {
+  var that = animal(spec);
+
+  // Private
+  function bark () {
+    return 'ow ow';
+  }
+
+  // Public
+  that.bark = bark;
+
+  return that;
+}
+
+// Main
+var toto = dog({name: 'toto'});
+console.log(toto.say_name());
+console.log(toto.bark());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

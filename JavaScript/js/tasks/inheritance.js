@@ -1,48 +1,38 @@
 
 // ===|=== PROTOTYPE INHERITANCE
-// function Animal (name, run) {
-//   this.name = name;
-//   this.run = run;
-// };
+function Animal (name, run) {
+  this.name = name;
+  this.run = run;
+};
 
-// Animal.prototype.getName = function () {
-//   return this.name;
-// }
+Animal.prototype.getName = function () {
+  return this.name;
+}
 
-// Animal.prototype.getRun = function() {
-//   return this.run;
-// };
-
-
-
-
-// function Rabbit(name, run, color) {
-//   // вызываем super constructor
-//   Animal.call(this, name, run)
-//   this.color = color;
-// }
-
-// Rabbit.prototype = Object.create(Animal.prototype);
-// Rabbit.prototype.setColor = function(color) {
-//   this.color = color;
-// }
-
-// Rabbit.prototype.getColor = function() {
-//   return this.color;
-// }
-
-// let rabbit = new Rabbit('Willy', '38', 'white');
-// console.log(rabbit);
+Animal.prototype.getRun = function() {
+  return this.run;
+};
 
 
 
 
+function Rabbit(name, run, color) {
+  // вызываем super constructor
+  Animal.call(this, name, run)
+  this.color = color;
+}
 
+Rabbit.prototype = Object.create(Animal.prototype);
+Rabbit.prototype.setColor = function(color) {
+  this.color = color;
+}
 
+Rabbit.prototype.getColor = function() {
+  return this.color;
+}
 
-
-
-
+let rabbit = new Rabbit('Willy', '38', 'white');
+console.log(rabbit);
 
 
 
@@ -55,7 +45,7 @@ class Animal{
   constructor(name, run) {
     this.name = name
     this.run = run
-    return this
+    return this;
   }
 
 
@@ -82,14 +72,6 @@ class Rabbit extends Animal {
   }
 }
 
-// const willy = new Animal('Willy', 'white', 38);
-// willy.getName();
-// console.log(willy.getName());
-// willy.getColor();
-// console.log(willy.getColor());
-// willy.getSpeed();
-// console.log(willy.getSpeed());
-
 
 function firstRabbit() {
   let rabbit = new Rabbit('Willy', '38', 'white');
@@ -113,26 +95,39 @@ function firstRabbit() {
 
 
 // ===|=== FUNCTIONAL INHERITANCE
-// function Animal(name) {
-//   this.name = name;
-// }
+function animal (spec) {
+  var obj = {};
 
-// Animal.prototype.run = function() {
-//   console.log(this.name + "достигает скорости");
-// }
+function getNane () {
+  return spec.name;
+}
 
-// Animal.eat = function() {
-//   return this;
-// }
+function getRun () {
+  return 'I can to run';
+}
+
+obj.getNane = getNane;
+obj.getRun = getRun;
+
+return obj;
+}
 
 
+function rabbit(spec) {
+  var obj = animal(spec);
 
-// let Rabbit = new Animal();
-// let run = Rabbit.run;
-// run();
+  function color () {
+    return 'white';
+  }
 
-// let eat = Animal.eat;
-// eat();
+  obj.color = color;
+  return obj;
+}
+
+var willy = rabbit({name: 'Willy', run: 38});
+console.log(willy.getNane());
+console.log(willy.getRun());
+console.log(willy.color());
 
 
 
