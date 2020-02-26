@@ -3,6 +3,22 @@ body {
   height: 2000px;
 }
 
+.menu-list {
+  list-style: none;
+  position: relative;
+}
+
+.list-item {
+  text-transform: uppercase;
+  /* position: absolute; */
+  justify-content: space-between;
+}
+
+
+
+
+
+
 .field {
   width: 200px;
   height: 150px;
