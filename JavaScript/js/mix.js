@@ -275,44 +275,44 @@
 
 // Javascript Crockford's Functional Inheritance
 // spec receives instance properties
-function animal (spec) {
-  // interface object
-  var that = {};
+// function animal (spec) {
+//   // interface object
+//   var that = {};
 
-  // Private
-  function breathe () {
-    return "I'm breathing";
-  }
+//   // Private
+//   function breathe () {
+//     return "I'm breathing";
+//   }
 
-  function say_name () {
-    return spec.name || '';
-  }
+//   function say_name () {
+//     return spec.name || '';
+//   }
 
-  // Public - goes into that
-  that.breathe  = breathe;
-  that.say_name = say_name;
+//   // Public - goes into that
+//   that.breathe  = breathe;
+//   that.say_name = say_name;
 
-  return that;
-}
+//   return that;
+// }
 
-function dog (spec) {
-  var that = animal(spec);
+// function dog (spec) {
+//   var that = animal(spec);
 
-  // Private
-  function bark () {
-    return 'ow ow';
-  }
+//   // Private
+//   function bark () {
+//     return 'ow ow';
+//   }
 
-  // Public
-  that.bark = bark;
+//   // Public
+//   that.bark = bark;
 
-  return that;
-}
+//   return that;
+// }
 
-// Main
-var toto = dog({name: 'toto'});
-console.log(toto.say_name());
-console.log(toto.bark());
+// // Main
+// var toto = dog({name: 'toto'});
+// console.log(toto.say_name());
+// console.log(toto.bark());
 
 
 

@@ -1,0 +1,29 @@
+
+body {
+  height: 2000px;
+}
+
+.field {
+  width: 200px;
+  height: 150px;
+  border: 3px dotted red;
+  background-color: #3a9e3a;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+
+.ball {
+  position: absolute;
+  left: 0; /* по отношению к ближайшему расположенному предку (поле) */
+  top: 0;
+  width: 40px;
+  height: 40px;
+  transition: 0.7s all;
+}
+
+
+
+
+
