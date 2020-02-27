@@ -92,7 +92,7 @@
 
 
 
-// ===|=== FUNCTIONAL INHERITANCE
+// ===|=== FUNCTIONAL INHERITANCE I VERSION
 // function animal (spec) {
 //   var obj = {};
 
@@ -127,6 +127,38 @@
 // console.log(willy.getRun());
 // console.log(willy.color());
 
+
+
+
+
+
+
+
+
+
+
+// <+++|+++> FUNCTIONAL INHERITANCE II VERSION
+// function Animal(name) {
+//   this.name = name;
+  
+//   this.getName = function() {
+//     return this.name;
+//   }
+// }
+
+
+// function Rabbit() {
+//   Animal.apply(this, arguments);
+
+//   this.run = function() {
+//     return 'Rabbit ' + this.getName() + 'is running';
+//   }
+// }
+
+
+// var rabbit = new Rabbit('Willy');
+// console.log(rabbit.getName());
+// console.log(rabbit.run());
 
 
 

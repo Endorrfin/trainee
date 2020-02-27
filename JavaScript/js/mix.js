@@ -354,6 +354,63 @@
 
 
 
+// ===|=== FUNCTIONAL INHERITANCE II VERSION
+// function Animal (name) {
+//   this.name = name;
+//   var canRun = false;
+// };
+
+// this.getName = function () {
+//   return this.name;
+// }
+
+// this.run = function() {
+//   canRun = true;
+// };
+
+
+
+
+// function Rabbit(color) {
+//   Animal.apply(this, arguments);
+//   this.color = color;
+// }
+
+// this.getColor = function() {
+//   return this.color;
+// }
+
+// let rabbit = new Rabbit('Willy', '38', 'white');
+// console.log(rabbit);
+
+
+
+
+
+
+/* ES 5 */
+/* Функциональное наследование */
+// function Animal(name) {
+//     this.name = name;
+
+//     this.getName = function() {
+//         return this.name;
+//     }
+// }
+
+// function Dog() {
+//     Animal.apply(this, arguments);
+
+//     this.bark = function() {
+//         return "Dog " + this.getName() + "is barking";
+//     }
+// }
+
+// var dog = new Dog('Aban');
+
+// console.log(dog.getName());
+// console.log(dog.bark());
+
 
 
 
