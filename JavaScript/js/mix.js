@@ -416,12 +416,47 @@
 
 
 
+// Promise.reject('a')
+//   .catch(p => p + 'b')
+//   .catch(p => p + 'с')
+//   .then(p => p + 'd')
+//   .finally(p => p + 'e')
+//   .then(p => console.log(p))
+
+
+// //////////////////////////////
+
+// Promise.resolve('BatMan')
+//   .then(function (val) {
+//     console.log('then', val); // BatMan
+//     throw new Error('Error happen');
+//     return 'OMG!';
+//   })
+//   .then((val) => console.log('then', val)) // OMG --> ничего 
+//   .catch((val) => {
+//     console.log('catch', val); // OMG --> Error happen
+//     return Promise.reject();
+//   })
+//   .then(firstHandler, secondHandler) // OMG OMG --> second undefined
+//   .then(firstHandler, secondHandler) // OMG OMG --> first undefined
+//   .then(firstHandler, secondHandler); // OMG OMG --> first undefined
+
+// function firstHandler(val) {
+//   console.log('first', val);
+// }
+
+// function secondHandler(val) {
+//   console.log('second', val);
+// }
 
 
 
 
+// const firstPromise = new Promise((res, rej) => setTimeout(res, 500, "один"));
+// const secondPromise = new Promise((res, rej) => setTimeout(res, 100, "два"));
 
-
+// Promise.race([firstPromise, secondPromise]).then(res => console.log(res)); // два 
+// Promise.all([firstPromise, secondPromise]).then(res => console.log(res)); // [два, один] [один, два]
 
 
 
