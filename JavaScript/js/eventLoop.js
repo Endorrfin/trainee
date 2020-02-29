@@ -91,35 +91,76 @@
 //===========================================================================
 // <===||===> TASK 6
 
-function foo() {
-  throw new Error('Ops');
-}
+// function foo() {
+//   throw new Error('Ops');
+// }
 
-function bar () {
-  foo();
-}
+// function bar () {
+//   foo();
+// }
 
-function baz() {
-  bar();
-}
+// function baz() {
+//   bar();
+// }
 
-baz();
-
-
+// baz();
 
 
 
 
-// <===||===> TASK 5
+
+
+// <===||===> TASK 7
+// console.log('script start'); // 1
+
+// setTimeout(function() {
+//   console.log('setTimeout'); // 5
+// }, 0);
+
+// Promise.resolve().then(function() {
+//   console.log('promise1'); // 3
+// }).then(function() {
+//   console.log('promise2'); // 4
+// });
+
+// console.log('script end'); // 2
 
 
 
 
-// <===||===> TASK 5
+// <===||===> TASK 8
+
+// document.body.addEventListener('DOMNodeInserted', () => {
+//   console.log('Stuff added to <body/>!');
+// });
+
+// for (let i = 0; i < 100; i++) {
+//   const span = document.createElement('span');
+//   document.body.appendChild(span);
+//   span.textContent = 'Hello span'
+// }
+
+// <===||===> TASK 9
+
+// const btn4 = document.querySelector('.btn-4');
+// btn4.addEventListener('click', () => {
+//   Promise.resolve().then (() => console.log('Microtask 1'));
+//   console.log('Listener 1');
+// });
 
 
+// btn4.addEventListener('click', () => {
+//   Promise.resolve().then (() => console.log('Microtask 2'));
+//   console.log('Listener 2');
+// });
 
-// <===||===> TASK 5
+
+// btn4.addEventListener('click', () => {
+//   Promise.resolve().then (() => console.log('Microtask 3'));
+//   console.log('Listener 3');
+// });
+
+// btn4.click();
 
 
 
