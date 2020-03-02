@@ -462,6 +462,68 @@
 
 
 
+// <===||===> TASK 1
+/** 
+ * Он выводит в консольлог 10 раз "R2D10", почему? Как его переписать, чтобы в консольлог выводилось:
+"R2D0"
+"R2D1"
+"R2D2"
+"R2D3"
+"R2D4"
+"R2D5"
+"R2D6"
+"R2D7"
+"R2D8"
+"R2D9"
+ */
+
+// function makeDroids() {
+
+//   var droids = [];
+
+//   /* test */
+//   for (var i = 0; i < 10; i++) {
+//     var droid = function() {
+//       console.log("R2D" + i);
+//     };
+//     droids.push(droid);
+//   }
+//   /* test */
+
+//   return droids;
+// }
+
+// for (let d of makeDroids()) {
+//   d();
+// }
+
+
+
+
+// <===||===> TASK 1
+/**
+ * Что будет в консольлоге и почему?
+ */
+
+// function tack() {
+//   console.log('tick');
+
+//   this.tack = function() {
+//       console.log('tack');
+//   };
+
+//   this.tick = function() {
+//       this.tack();
+//   };
+// }
+
+// var tick = new tack();
+// setTimeout(tick.tick, 10);
+
+
+
+
+
 
 
 

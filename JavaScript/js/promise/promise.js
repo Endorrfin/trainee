@@ -247,6 +247,23 @@
 
 
 
+// <===||===> TASK FROM MENTOR IV
+// Promise.resolve('Error')
+//   .then('12312321')
+//   .then((e) => {
+//     console.log(e); // Error
+//     throw new Error('Error again')
+//   })
+//   .catch('undefinde happen')
+//   .catch((e) => console.log(e)) // Error again => "Error again"
+//   .then((a) => Promise.reject(a + ' is'))
+//   .then((a) => a + ' not')
+//   .catch((a) => console.log(a + ' undefined')) // undefined is undefined
+
+// function catchError(arg1) {
+//   return arg1 + ' happen';
+// }
+
 
 
 
@@ -267,6 +284,53 @@
 
 // doSomething().then(doSomethingElse());
 // doSomething().then(doSomthingElse);
+
+
+
+
+
+// <===||===> TASK 2
+// function parallel(funcArray, doneAll) {
+
+// }
+
+// var a = function(done) {
+//   setTimeout(function() {
+//     done('result a');
+//   }, 300);
+// };
+
+// var b = function(done) {
+//   setTimeout(function() {
+//     done('result b');
+//   }, 200);
+// };
+
+// parallel([a,b], function(results) {
+//   console.log(results); // ['result a', 'result b']
+// });
+
+
+
+
+
+
+
+// <===||===> TASK 1
+/**
+ * В каком порядке выведется консольлог и почему?
+ */
+
+
+// console.log('1');
+
+// setTimeout(function() {
+//   console.log('2')
+// }, 0);
+
+// Promise.resolve().then( () => console.log('3') );
+
+// console.log('4');
 
 
 
