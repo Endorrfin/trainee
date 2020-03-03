@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Hero} from '../hero';
-import {HEROES} from '../mock-heroes';
+
+import { Hero } from '../hero';
+import { HeroService } from '../hero.service';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-heroes',
@@ -9,21 +11,23 @@ import {HEROES} from '../mock-heroes';
 })
 export class HeroesComponent implements OnInit {
 
-  // hero = 'Windstorm';
-  // public hero: string = 'Windstorm';
-  public selectedHero: Hero;
+  selectedHero: Hero;
 
+  heroes: Hero[];
 
-  public heroes: Hero[] = HEROES;
+  constructor(private heroService: HeroService, private messageService: MessageService) { }
 
-  
-  public onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-}
-
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit() {
+    this.getHeroes();
   }
 
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+    this.messageService.add(`HeroService: Selected hero id=${hero.id}`);
+  }
+
+  getHeroes(): void {
+    this.heroService.getHeroes()
+        .subscribe(heroes => this.heroes = heroes);
+  }
 }
