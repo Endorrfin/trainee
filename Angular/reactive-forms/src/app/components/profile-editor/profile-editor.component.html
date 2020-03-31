@@ -1,1 +1,63 @@
-<p>profile-editor works!</p>
+
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <label>
+    First Name: <br>
+    <input type="text" formControlName="firstName">
+  </label>
+
+  <br>
+  <label>
+    Last Name: <br>
+    <input type="text" formControlName="lastName">
+  </label>
+</form>
+
+
+
+
+<!--Grouping form controls-->
+
+<div formGroupName="address">
+  <h3>Address</h3>
+
+  <br>
+  <label>
+    Street: <br>
+    <input type="text" formControlName="street">
+  </label>
+
+  <br>
+  <label>
+    City: <br>
+    <input type="text" formControlName="city">
+  </label>
+
+  <br>
+  <label>
+    State: <br>
+    <input type="text" formControlName="state">
+  </label>
+
+  <br>
+  <label>
+    Zip: <br>
+    <input type="text" formControlName="zip">
+  </label>
+</div>
+
+<button type="submit" [disabled]="!profileForm.valid">Submit</button>
+
+
+<p>
+  <button (click)="updateProfile()">Update Profile</button>
+</p>
+
+<hr>
+
+
+<!--Generating form controls with FormBuilder-->
+
+
+
+
+
