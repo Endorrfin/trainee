@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2cac7819-e09b-4337-9dd4-8f053b1d4e19" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1Yl46JMIQgn03Qrj2JJu5R8PAa4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="Tests (todo-app-angular-js)" type="JavaScriptTestRunnerKarma">
+      <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <working-directory value="$PROJECT_DIR$" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="E2E Tests (todo-app-angular-js)" type="JavaScriptTestRunnerProtractor">
+      <config-file value="$PROJECT_DIR$/e2e/protractor.conf.js" />
+      <node-interpreter value="project" />
+      <protractor-options value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2cac7819-e09b-4337-9dd4-8f053b1d4e19" name="Default Changelist" comment="" />
+      <created>1583503669695</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583503669695</updated>
+      <workItem from="1583503677542" duration="921000" />
+      <workItem from="1584372568436" duration="18249000" />
+      <workItem from="1584591527145" duration="11302000" />
+      <workItem from="1584610816678" duration="5529000" />
+      <workItem from="1584879473896" duration="10542000" />
+      <workItem from="1584956508783" duration="837000" />
+      <workItem from="1584966378160" duration="10509000" />
+      <workItem from="1585207714073" duration="3000" />
+      <workItem from="1585225993235" duration="117000" />
+      <workItem from="1585227909622" duration="5923000" />
+      <workItem from="1585269073355" duration="28970000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="240" y="65" width="800" height="714" key="#Intentions" timestamp="1585550092324">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="240" y="65" width="800" height="714" key="#Intentions/0.0.1280.800@0.0.1280.800" timestamp="1585550092324" />
+    <state width="1259" height="204" key="GridCell.Tab.0.bottom" timestamp="1584591462149">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1259" height="204" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1584591462149" />
+    <state width="1259" height="204" key="GridCell.Tab.0.center" timestamp="1584591462145">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1259" height="204" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1584591462145" />
+    <state width="1259" height="204" key="GridCell.Tab.0.left" timestamp="1584591462144">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1259" height="204" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1584591462144" />
+    <state width="1259" height="204" key="GridCell.Tab.0.right" timestamp="1584591462147">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1259" height="204" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1584591462147" />
+    <state x="149" y="39" key="SettingsEditor" timestamp="1585304523929">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="149" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1585304523929" />
+    <state x="298" y="22" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585067169036">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="298" y="22" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.800@0.0.1280.800" timestamp="1585067169036" />
+    <state x="423" y="324" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584412762637">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="423" y="324" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.800@0.0.1280.800" timestamp="1584412762637" />
+  </component>
+</project>
