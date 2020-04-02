@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b053e1e1-9ffc-487d-b712-0802236e169b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/UserInput.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angular-news-app" beforeDir="false" afterPath="$PROJECT_DIR$/../angular-news-app" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../todo-app-angular-components" beforeDir="false" afterPath="$PROJECT_DIR$/../todo-app-angular-components" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1ZvT7sL3ifxP3UvuGEGXtp2Y4rR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b053e1e1-9ffc-487d-b712-0802236e169b" name="Default Changelist" comment="" />
+      <created>1585718403155</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585718403155</updated>
+      <workItem from="1585718404981" duration="668000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/app/sample03-reactiveForms/02_form_control_validation/form-control-val.component.js.map" />
+        <option value="$PROJECT_DIR$/app/sample03-reactiveForms/02_form_control_validation/form-control-val.component.js" />
+        <option value="$PROJECT_DIR$/app/sample03-reactiveForms/05_custom_validators/custom-validators.component.js.map" />
+        <option value="$PROJECT_DIR$/app/sample03-reactiveForms/05_custom_validators/custom-validators.component.js" />
+        <option value="$PROJECT_DIR$/app/sample03-reactiveForms/05_custom_validators/custom-validators.js.map" />
+        <option value="$PROJECT_DIR$/app/sample03-reactiveForms/05_custom_validators/custom-validators.js" />
+        <option value="$PROJECT_DIR$/app/sample03-reactiveForms/04_reactive_form/reactive-form.component.js.map" />
+        <option value="$PROJECT_DIR$/app/sample03-reactiveForms/04_reactive_form/reactive-form.component.js" />
+        <option value="$PROJECT_DIR$/app/sample03-reactiveForms/03_form_builder/form-builder.component.js.map" />
+        <option value="$PROJECT_DIR$/app/sample03-reactiveForms/03_form_builder/form-builder.component.js" />
+        <option value="$PROJECT_DIR$/app/sample03-reactiveForms/01_form_control/form-control.component.js.map" />
+        <option value="$PROJECT_DIR$/app/sample03-reactiveForms/01_form_control/form-control.component.js" />
+        <option value="$PROJECT_DIR$/app/sample03-reactiveForms/user.js.map" />
+        <option value="$PROJECT_DIR$/app/sample03-reactiveForms/user.js" />
+        <option value="$PROJECT_DIR$/app/sample03-reactiveForms/index.js.map" />
+        <option value="$PROJECT_DIR$/app/sample03-reactiveForms/index.js" />
+        <option value="$PROJECT_DIR$/app/sample03-reactiveForms/reactive-forms-samples.module.js.map" />
+        <option value="$PROJECT_DIR$/app/sample03-reactiveForms/reactive-forms-samples.module.js" />
+        <option value="$PROJECT_DIR$/app/sample02-forms/07_form_msg_in_code/user-form5.component.js.map" />
+        <option value="$PROJECT_DIR$/app/sample02-forms/07_form_msg_in_code/user-form5.component.js" />
+        <option value="$PROJECT_DIR$/app/sample02-forms/05_form_few_errors/form-errors.component.js.map" />
+        <option value="$PROJECT_DIR$/app/sample02-forms/05_form_few_errors/form-errors.component.js" />
+        <option value="$PROJECT_DIR$/app/sample02-forms/03_form_custom_css/user-form2.component.js.map" />
+        <option value="$PROJECT_DIR$/app/sample02-forms/03_form_custom_css/user-form2.component.js" />
+        <option value="$PROJECT_DIR$/app/sample02-forms/04_form_error_msg/user-form3.component.js.map" />
+        <option value="$PROJECT_DIR$/app/sample02-forms/04_form_error_msg/user-form3.component.js" />
+        <option value="$PROJECT_DIR$/app/sample02-forms/06_form_ngSubmit/user-form4.component.js.map" />
+        <option value="$PROJECT_DIR$/app/sample02-forms/06_form_ngSubmit/user-form4.component.js" />
+        <option value="$PROJECT_DIR$/app/sample02-forms/02_styles/styles-sample.component.js.map" />
+        <option value="$PROJECT_DIR$/app/sample02-forms/02_styles/styles-sample.component.js" />
+        <option value="$PROJECT_DIR$/app/sample02-forms/01_form/user-form.component.js.map" />
+        <option value="$PROJECT_DIR$/app/sample02-forms/01_form/user-form.component.js" />
+        <option value="$PROJECT_DIR$/app/sample02-forms/forms-sample.module.js.map" />
+        <option value="$PROJECT_DIR$/app/sample02-forms/forms-sample.module.js" />
+        <option value="$PROJECT_DIR$/app/sample02-forms/user.js.map" />
+        <option value="$PROJECT_DIR$/app/sample02-forms/user.js" />
+        <option value="$PROJECT_DIR$/app/sample02-forms/index.js.map" />
+        <option value="$PROJECT_DIR$/app/sample02-forms/index.js" />
+        <option value="$PROJECT_DIR$/app/sample01-input/03_template_ref/template-ref.component.js.map" />
+        <option value="$PROJECT_DIR$/app/sample01-input/03_template_ref/template-ref.component.js" />
+        <option value="$PROJECT_DIR$/app/sample01-input/02_event_object/event-object.component.js.map" />
+        <option value="$PROJECT_DIR$/app/sample01-input/02_event_object/event-object.component.js" />
+        <option value="$PROJECT_DIR$/app/sample01-input/04_keyEnter/key-enter.component.js.map" />
+        <option value="$PROJECT_DIR$/app/sample01-input/04_keyEnter/key-enter.component.js" />
+        <option value="$PROJECT_DIR$/app/sample01-input/06_my-list/my-list.component.js.map" />
+        <option value="$PROJECT_DIR$/app/sample01-input/06_my-list/my-list.component.js" />
+        <option value="$PROJECT_DIR$/app/sample01-input/01_events/events.component.js.map" />
+        <option value="$PROJECT_DIR$/app/sample01-input/01_events/events.component.js" />
+        <option value="$PROJECT_DIR$/app/sample01-input/05_blur/blur.component.js.map" />
+        <option value="$PROJECT_DIR$/app/sample01-input/05_blur/blur.component.js" />
+        <option value="$PROJECT_DIR$/app/sample01-input/input-sample.module.js.map" />
+        <option value="$PROJECT_DIR$/app/sample01-input/input-sample.module.js" />
+        <option value="$PROJECT_DIR$/app/sample01-input/index.js.map" />
+        <option value="$PROJECT_DIR$/app/sample01-input/index.js" />
+        <option value="$PROJECT_DIR$/app/app.module.js.map" />
+        <option value="$PROJECT_DIR$/app/app.module.js" />
+        <option value="$PROJECT_DIR$/app/app.component.js.map" />
+        <option value="$PROJECT_DIR$/app/app.component.js" />
+        <option value="$PROJECT_DIR$/app/app.routes.js.map" />
+        <option value="$PROJECT_DIR$/app/app.routes.js" />
+        <option value="$PROJECT_DIR$/app/main.js.map" />
+        <option value="$PROJECT_DIR$/app/main.js" />
+      </list>
+    </option>
+  </component>
+</project>
