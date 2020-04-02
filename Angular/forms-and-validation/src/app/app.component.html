@@ -5,7 +5,7 @@
 
     <div class="form-control">
       <label>Email</label>
-      <input type="text" placeholder="Email" formControlName="email">
+      <input type="text" placeholder=" enter Email" formControlName="email">
       <div
         *ngIf="form.get('email').invalid && form.get('email').touched"
         class="validation">
@@ -15,8 +15,8 @@
     </div>
 
     <div class="form-control">
-      <label>Пароль</label>
-      <input type="password" placeholder="Пароль" formControlName="password">
+      <label>Password</label>
+      <input type="password" placeholder="enter password" formControlName="password">
 
 <!--      <pre> {{form.get('password').errors | json }} </pre> = local debag-->
       <div
@@ -35,7 +35,7 @@
       <h2>Адрес</h2>
 
       <div class="form-control">
-        <label>Страна</label>
+        <label>Country</label>
 
         <select formControlName="country">
           <option value="ua">Ukraine</option>
@@ -50,15 +50,15 @@
         <input type="text" formControlName="city" placeholder="city">
       </div>
 
-      <button class="btn" type="button" (click)="setCapital()">Выбрать столицу</button>
+      <button class="btn" type="button" (click)="setCapital()">Select capital</button>
     </div>
 
-    <div class="card">
-      <h2>Ваши навыки</h2>
-      <button class="btn" type="button">Добавить умение</button>
-      <div class="form-control">
-        <label></label>
-        <input type="text">
+    <div class="card" formGroupName="skills">
+      <h2>Your skills</h2>
+      <button class="btn" type="button" (click)="addSkill()">Add skills</button>
+      <div class="form-control" *ngFor="let control of form.get('skills').controls; let idx = index">
+        <label>skills {{idx + 1}}</label>
+        <input type="text" [formControlName]="idx">
       </div>
     </div>
 
